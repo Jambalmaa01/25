@@ -1,0 +1,1727 @@
+{
+  "id": "7f3f63c0-9d49-4ec0-b790-9ccd7c98f6ff",
+  "prevId": "aa21047f-3a13-4816-8377-a2944d124728",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.border_out_points": {
+      "name": "border_out_points",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code_name": {
+          "name": "code_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "geom": {
+          "name": "geom",
+          "type": "geometry(GEOMETRYCOLLECTION, 4326)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "country_id": {
+          "name": "country_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "city_id": {
+          "name": "city_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "district_id": {
+          "name": "district_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_at": {
+          "name": "added_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_at": {
+          "name": "edited_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_at": {
+          "name": "removed_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_by": {
+          "name": "added_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_by": {
+          "name": "edited_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_by": {
+          "name": "removed_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "border_out_points_country_id_countries_id_fk": {
+          "name": "border_out_points_country_id_countries_id_fk",
+          "tableFrom": "border_out_points",
+          "tableTo": "countries",
+          "columnsFrom": [
+            "country_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "border_out_points_city_id_cities_id_fk": {
+          "name": "border_out_points_city_id_cities_id_fk",
+          "tableFrom": "border_out_points",
+          "tableTo": "cities",
+          "columnsFrom": [
+            "city_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "border_out_points_district_id_districts_id_fk": {
+          "name": "border_out_points_district_id_districts_id_fk",
+          "tableFrom": "border_out_points",
+          "tableTo": "districts",
+          "columnsFrom": [
+            "district_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "border_out_points_added_by_users_id_fk": {
+          "name": "border_out_points_added_by_users_id_fk",
+          "tableFrom": "border_out_points",
+          "tableTo": "users",
+          "columnsFrom": [
+            "added_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "border_out_points_edited_by_users_id_fk": {
+          "name": "border_out_points_edited_by_users_id_fk",
+          "tableFrom": "border_out_points",
+          "tableTo": "users",
+          "columnsFrom": [
+            "edited_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "border_out_points_removed_by_users_id_fk": {
+          "name": "border_out_points_removed_by_users_id_fk",
+          "tableFrom": "border_out_points",
+          "tableTo": "users",
+          "columnsFrom": [
+            "removed_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "border_out_points_name_unique": {
+          "name": "border_out_points_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        },
+        "border_out_points_code_name_unique": {
+          "name": "border_out_points_code_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code_name"
+          ]
+        }
+      }
+    },
+    "public.border_points": {
+      "name": "border_points",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code_name": {
+          "name": "code_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "geom": {
+          "name": "geom",
+          "type": "geometry(GEOMETRYCOLLECTION, 4326)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "country_id": {
+          "name": "country_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "city_id": {
+          "name": "city_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "district_id": {
+          "name": "district_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_at": {
+          "name": "added_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_at": {
+          "name": "edited_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_at": {
+          "name": "removed_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_by": {
+          "name": "added_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_by": {
+          "name": "edited_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_by": {
+          "name": "removed_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "border_points_country_id_countries_id_fk": {
+          "name": "border_points_country_id_countries_id_fk",
+          "tableFrom": "border_points",
+          "tableTo": "countries",
+          "columnsFrom": [
+            "country_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "border_points_city_id_cities_id_fk": {
+          "name": "border_points_city_id_cities_id_fk",
+          "tableFrom": "border_points",
+          "tableTo": "cities",
+          "columnsFrom": [
+            "city_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "border_points_district_id_districts_id_fk": {
+          "name": "border_points_district_id_districts_id_fk",
+          "tableFrom": "border_points",
+          "tableTo": "districts",
+          "columnsFrom": [
+            "district_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "border_points_added_by_users_id_fk": {
+          "name": "border_points_added_by_users_id_fk",
+          "tableFrom": "border_points",
+          "tableTo": "users",
+          "columnsFrom": [
+            "added_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "border_points_edited_by_users_id_fk": {
+          "name": "border_points_edited_by_users_id_fk",
+          "tableFrom": "border_points",
+          "tableTo": "users",
+          "columnsFrom": [
+            "edited_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "border_points_removed_by_users_id_fk": {
+          "name": "border_points_removed_by_users_id_fk",
+          "tableFrom": "border_points",
+          "tableTo": "users",
+          "columnsFrom": [
+            "removed_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "border_points_name_unique": {
+          "name": "border_points_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        },
+        "border_points_code_name_unique": {
+          "name": "border_points_code_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code_name"
+          ]
+        }
+      }
+    },
+    "public.cities": {
+      "name": "cities",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code_name": {
+          "name": "code_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "country_id": {
+          "name": "country_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_at": {
+          "name": "added_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_at": {
+          "name": "edited_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_at": {
+          "name": "removed_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_by": {
+          "name": "added_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_by": {
+          "name": "edited_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_by": {
+          "name": "removed_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "cities_country_id_countries_id_fk": {
+          "name": "cities_country_id_countries_id_fk",
+          "tableFrom": "cities",
+          "tableTo": "countries",
+          "columnsFrom": [
+            "country_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "cities_added_by_users_id_fk": {
+          "name": "cities_added_by_users_id_fk",
+          "tableFrom": "cities",
+          "tableTo": "users",
+          "columnsFrom": [
+            "added_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "cities_edited_by_users_id_fk": {
+          "name": "cities_edited_by_users_id_fk",
+          "tableFrom": "cities",
+          "tableTo": "users",
+          "columnsFrom": [
+            "edited_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "cities_removed_by_users_id_fk": {
+          "name": "cities_removed_by_users_id_fk",
+          "tableFrom": "cities",
+          "tableTo": "users",
+          "columnsFrom": [
+            "removed_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "cities_name_unique": {
+          "name": "cities_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        },
+        "cities_code_name_unique": {
+          "name": "cities_code_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code_name"
+          ]
+        }
+      }
+    },
+    "public.countries": {
+      "name": "countries",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code_name": {
+          "name": "code_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "added_at": {
+          "name": "added_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_at": {
+          "name": "edited_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_at": {
+          "name": "removed_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_by": {
+          "name": "added_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_by": {
+          "name": "edited_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_by": {
+          "name": "removed_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "countries_added_by_users_id_fk": {
+          "name": "countries_added_by_users_id_fk",
+          "tableFrom": "countries",
+          "tableTo": "users",
+          "columnsFrom": [
+            "added_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "countries_edited_by_users_id_fk": {
+          "name": "countries_edited_by_users_id_fk",
+          "tableFrom": "countries",
+          "tableTo": "users",
+          "columnsFrom": [
+            "edited_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "countries_removed_by_users_id_fk": {
+          "name": "countries_removed_by_users_id_fk",
+          "tableFrom": "countries",
+          "tableTo": "users",
+          "columnsFrom": [
+            "removed_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "countries_name_unique": {
+          "name": "countries_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        },
+        "countries_code_name_unique": {
+          "name": "countries_code_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code_name"
+          ]
+        }
+      }
+    },
+    "public.districts": {
+      "name": "districts",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code_name": {
+          "name": "code_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "city_id": {
+          "name": "city_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_at": {
+          "name": "added_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_at": {
+          "name": "edited_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_at": {
+          "name": "removed_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_by": {
+          "name": "added_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_by": {
+          "name": "edited_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_by": {
+          "name": "removed_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "districts_city_id_cities_id_fk": {
+          "name": "districts_city_id_cities_id_fk",
+          "tableFrom": "districts",
+          "tableTo": "cities",
+          "columnsFrom": [
+            "city_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "districts_added_by_users_id_fk": {
+          "name": "districts_added_by_users_id_fk",
+          "tableFrom": "districts",
+          "tableTo": "users",
+          "columnsFrom": [
+            "added_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "districts_edited_by_users_id_fk": {
+          "name": "districts_edited_by_users_id_fk",
+          "tableFrom": "districts",
+          "tableTo": "users",
+          "columnsFrom": [
+            "edited_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "districts_removed_by_users_id_fk": {
+          "name": "districts_removed_by_users_id_fk",
+          "tableFrom": "districts",
+          "tableTo": "users",
+          "columnsFrom": [
+            "removed_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "districts_name_unique": {
+          "name": "districts_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        },
+        "districts_code_name_unique": {
+          "name": "districts_code_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code_name"
+          ]
+        }
+      }
+    },
+    "public.employee_migrations": {
+      "name": "employee_migrations",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "identity_number": {
+          "name": "identity_number",
+          "type": "varchar(4)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rank_group_id": {
+          "name": "rank_group_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "came_date_at_border_point": {
+          "name": "came_date_at_border_point",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "came_date_at_border_out_point": {
+          "name": "came_date_at_border_out_point",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "went_date_at_border_point": {
+          "name": "went_date_at_border_point",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "went_date_at_border_out_point": {
+          "name": "went_date_at_border_out_point",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rank_id": {
+          "name": "rank_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "role_id": {
+          "name": "role_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "added_at": {
+          "name": "added_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_at": {
+          "name": "edited_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_at": {
+          "name": "removed_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_by": {
+          "name": "added_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_by": {
+          "name": "edited_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_by": {
+          "name": "removed_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "employee_migrations_rank_group_id_rank_groups_id_fk": {
+          "name": "employee_migrations_rank_group_id_rank_groups_id_fk",
+          "tableFrom": "employee_migrations",
+          "tableTo": "rank_groups",
+          "columnsFrom": [
+            "rank_group_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employee_migrations_rank_id_ranks_id_fk": {
+          "name": "employee_migrations_rank_id_ranks_id_fk",
+          "tableFrom": "employee_migrations",
+          "tableTo": "ranks",
+          "columnsFrom": [
+            "rank_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employee_migrations_role_id_roles_id_fk": {
+          "name": "employee_migrations_role_id_roles_id_fk",
+          "tableFrom": "employee_migrations",
+          "tableTo": "roles",
+          "columnsFrom": [
+            "role_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employee_migrations_employee_id_employees_id_fk": {
+          "name": "employee_migrations_employee_id_employees_id_fk",
+          "tableFrom": "employee_migrations",
+          "tableTo": "employees",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employee_migrations_added_by_users_id_fk": {
+          "name": "employee_migrations_added_by_users_id_fk",
+          "tableFrom": "employee_migrations",
+          "tableTo": "users",
+          "columnsFrom": [
+            "added_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employee_migrations_edited_by_users_id_fk": {
+          "name": "employee_migrations_edited_by_users_id_fk",
+          "tableFrom": "employee_migrations",
+          "tableTo": "users",
+          "columnsFrom": [
+            "edited_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employee_migrations_removed_by_users_id_fk": {
+          "name": "employee_migrations_removed_by_users_id_fk",
+          "tableFrom": "employee_migrations",
+          "tableTo": "users",
+          "columnsFrom": [
+            "removed_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.employees": {
+      "name": "employees",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "nationality": {
+          "name": "nationality",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "family_name": {
+          "name": "family_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "last_name": {
+          "name": "last_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "first_name": {
+          "name": "first_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "country_id": {
+          "name": "country_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "city_id": {
+          "name": "city_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "district_id": {
+          "name": "district_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rank_group_id": {
+          "name": "rank_group_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rank_id": {
+          "name": "rank_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "role_id": {
+          "name": "role_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "birth_date": {
+          "name": "birth_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "added_at": {
+          "name": "added_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_at": {
+          "name": "edited_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_at": {
+          "name": "removed_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_by": {
+          "name": "added_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_by": {
+          "name": "edited_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_by": {
+          "name": "removed_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "employees_country_id_countries_id_fk": {
+          "name": "employees_country_id_countries_id_fk",
+          "tableFrom": "employees",
+          "tableTo": "countries",
+          "columnsFrom": [
+            "country_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employees_city_id_cities_id_fk": {
+          "name": "employees_city_id_cities_id_fk",
+          "tableFrom": "employees",
+          "tableTo": "cities",
+          "columnsFrom": [
+            "city_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employees_district_id_districts_id_fk": {
+          "name": "employees_district_id_districts_id_fk",
+          "tableFrom": "employees",
+          "tableTo": "districts",
+          "columnsFrom": [
+            "district_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employees_rank_group_id_rank_groups_id_fk": {
+          "name": "employees_rank_group_id_rank_groups_id_fk",
+          "tableFrom": "employees",
+          "tableTo": "rank_groups",
+          "columnsFrom": [
+            "rank_group_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employees_rank_id_ranks_id_fk": {
+          "name": "employees_rank_id_ranks_id_fk",
+          "tableFrom": "employees",
+          "tableTo": "ranks",
+          "columnsFrom": [
+            "rank_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employees_role_id_roles_id_fk": {
+          "name": "employees_role_id_roles_id_fk",
+          "tableFrom": "employees",
+          "tableTo": "roles",
+          "columnsFrom": [
+            "role_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employees_added_by_users_id_fk": {
+          "name": "employees_added_by_users_id_fk",
+          "tableFrom": "employees",
+          "tableTo": "users",
+          "columnsFrom": [
+            "added_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employees_edited_by_users_id_fk": {
+          "name": "employees_edited_by_users_id_fk",
+          "tableFrom": "employees",
+          "tableTo": "users",
+          "columnsFrom": [
+            "edited_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "employees_removed_by_users_id_fk": {
+          "name": "employees_removed_by_users_id_fk",
+          "tableFrom": "employees",
+          "tableTo": "users",
+          "columnsFrom": [
+            "removed_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.rank_groups": {
+      "name": "rank_groups",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code_name": {
+          "name": "code_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "added_at": {
+          "name": "added_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_at": {
+          "name": "edited_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_at": {
+          "name": "removed_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_by": {
+          "name": "added_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_by": {
+          "name": "edited_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_by": {
+          "name": "removed_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "rank_groups_added_by_users_id_fk": {
+          "name": "rank_groups_added_by_users_id_fk",
+          "tableFrom": "rank_groups",
+          "tableTo": "users",
+          "columnsFrom": [
+            "added_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "rank_groups_edited_by_users_id_fk": {
+          "name": "rank_groups_edited_by_users_id_fk",
+          "tableFrom": "rank_groups",
+          "tableTo": "users",
+          "columnsFrom": [
+            "edited_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "rank_groups_removed_by_users_id_fk": {
+          "name": "rank_groups_removed_by_users_id_fk",
+          "tableFrom": "rank_groups",
+          "tableTo": "users",
+          "columnsFrom": [
+            "removed_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "rank_groups_name_unique": {
+          "name": "rank_groups_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        },
+        "rank_groups_code_name_unique": {
+          "name": "rank_groups_code_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code_name"
+          ]
+        }
+      }
+    },
+    "public.ranks": {
+      "name": "ranks",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code_name": {
+          "name": "code_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rank_group_id": {
+          "name": "rank_group_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_at": {
+          "name": "added_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_at": {
+          "name": "edited_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_at": {
+          "name": "removed_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_by": {
+          "name": "added_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_by": {
+          "name": "edited_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_by": {
+          "name": "removed_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "ranks_rank_group_id_rank_groups_id_fk": {
+          "name": "ranks_rank_group_id_rank_groups_id_fk",
+          "tableFrom": "ranks",
+          "tableTo": "rank_groups",
+          "columnsFrom": [
+            "rank_group_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "ranks_added_by_users_id_fk": {
+          "name": "ranks_added_by_users_id_fk",
+          "tableFrom": "ranks",
+          "tableTo": "users",
+          "columnsFrom": [
+            "added_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "ranks_edited_by_users_id_fk": {
+          "name": "ranks_edited_by_users_id_fk",
+          "tableFrom": "ranks",
+          "tableTo": "users",
+          "columnsFrom": [
+            "edited_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "ranks_removed_by_users_id_fk": {
+          "name": "ranks_removed_by_users_id_fk",
+          "tableFrom": "ranks",
+          "tableTo": "users",
+          "columnsFrom": [
+            "removed_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "ranks_name_unique": {
+          "name": "ranks_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        },
+        "ranks_code_name_unique": {
+          "name": "ranks_code_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code_name"
+          ]
+        }
+      }
+    },
+    "public.roles": {
+      "name": "roles",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code_name": {
+          "name": "code_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "added_at": {
+          "name": "added_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_at": {
+          "name": "edited_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_at": {
+          "name": "removed_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_by": {
+          "name": "added_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_by": {
+          "name": "edited_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_by": {
+          "name": "removed_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "roles_added_by_users_id_fk": {
+          "name": "roles_added_by_users_id_fk",
+          "tableFrom": "roles",
+          "tableTo": "users",
+          "columnsFrom": [
+            "added_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "roles_edited_by_users_id_fk": {
+          "name": "roles_edited_by_users_id_fk",
+          "tableFrom": "roles",
+          "tableTo": "users",
+          "columnsFrom": [
+            "edited_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "roles_removed_by_users_id_fk": {
+          "name": "roles_removed_by_users_id_fk",
+          "tableFrom": "roles",
+          "tableTo": "users",
+          "columnsFrom": [
+            "removed_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "roles_name_unique": {
+          "name": "roles_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        },
+        "roles_code_name_unique": {
+          "name": "roles_code_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code_name"
+          ]
+        }
+      }
+    },
+    "public.users": {
+      "name": "users",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "username": {
+          "name": "username",
+          "type": "varchar(36)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password": {
+          "name": "password",
+          "type": "varchar(1024)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_at": {
+          "name": "added_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "edited_at": {
+          "name": "edited_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_at": {
+          "name": "removed_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "added_by": {
+          "name": "added_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "edited_by": {
+          "name": "edited_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "removed_by": {
+          "name": "removed_by",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "users_employee_id_employees_id_fk": {
+          "name": "users_employee_id_employees_id_fk",
+          "tableFrom": "users",
+          "tableTo": "employees",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "users_added_by_users_id_fk": {
+          "name": "users_added_by_users_id_fk",
+          "tableFrom": "users",
+          "tableTo": "users",
+          "columnsFrom": [
+            "added_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "users_edited_by_users_id_fk": {
+          "name": "users_edited_by_users_id_fk",
+          "tableFrom": "users",
+          "tableTo": "users",
+          "columnsFrom": [
+            "edited_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "users_removed_by_users_id_fk": {
+          "name": "users_removed_by_users_id_fk",
+          "tableFrom": "users",
+          "tableTo": "users",
+          "columnsFrom": [
+            "removed_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "users_username_unique": {
+          "name": "users_username_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "username"
+          ]
+        }
+      }
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
