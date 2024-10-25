@@ -85,6 +85,7 @@ export function SourceDateRange(props: SourceDateRangeProps) {
         variant='outlined'
         onClick={handleClick}
         endIcon={<ExpandMoreIcon />}
+        color='inherit'
       >
         Огноо
       </Button>

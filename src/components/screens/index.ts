@@ -1,9 +1,6 @@
-export * from './AdminCountriesScreen';
-export * from './AdminCountryAddScreen';
-export * from './AdminCountryEditScreen';
-export * from './AdminCountryRemoveForeverScreen';
-export * from './AdminCountryRemoveScreen';
-export * from './AdminCountryScreen';
+export * from './admin-city';
+export * from './admin-country';
+
 export * from './AdminScreen';
 export * from './AuthSignInScreen';
 export * from './HomeScreen';

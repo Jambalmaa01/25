@@ -16,6 +16,7 @@ export * from './SourceRemoveLink';
 export * from './SourceSearch';
 export * from './SourceSelectAllCheckbox';
 export * from './SourceSelectCheckbox';
+export * from './SourceSelectField';
 export * from './SourceSort';
 export * from './SourceTake';
 export * from './SourceToolbar';

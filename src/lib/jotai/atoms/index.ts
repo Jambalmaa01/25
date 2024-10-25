@@ -1,9 +1,6 @@
-export * from './adminCountriesScreenSelectedIdsAtom';
-export * from './adminCountryAddDialogAtom';
-export * from './adminCountryEditDialogAtom';
-export * from './adminCountryRemoveDialogAtom';
-export * from './adminCountryRemoveForeverDialogAtom';
-export * from './adminCountryViewDialogAtom';
+export * from './admin-city';
+export * from './admin-country';
+
 export * from './adminDrawerExpandedAtom';
 export * from './adminDrawerOpenAtom';
 export * from './authAccessTokenAtom';

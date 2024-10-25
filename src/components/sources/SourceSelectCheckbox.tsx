@@ -1,4 +1,4 @@
-import { Checkbox } from '@mui/material';
+import { Checkbox, Radio } from '@mui/material';
 
 export type SourceSelectCheckboxProps = {
   id: string;
@@ -10,7 +10,7 @@ export type SourceSelectCheckboxProps = {
 export function SourceSelectCheckbox(props: SourceSelectCheckboxProps) {
   const { id, selectedIds, setSelectedIds, selectMultiple } = props;
 
-  function onSelect() {
+  function onLocalSelect() {
     if (!selectMultiple) {
       setSelectedIds([id]);
 
@@ -26,5 +26,13 @@ export function SourceSelectCheckbox(props: SourceSelectCheckboxProps) {
     setSelectedIds([...selectedIds, id]);
   }
 
-  return <Checkbox checked={selectedIds.includes(id)} onChange={onSelect} />;
+  if (!selectMultiple) {
+    return (
+      <Radio checked={selectedIds.includes(id)} onChange={onLocalSelect} />
+    );
+  }
+
+  return (
+    <Checkbox checked={selectedIds.includes(id)} onChange={onLocalSelect} />
+  );
 }

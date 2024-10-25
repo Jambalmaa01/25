@@ -34,6 +34,10 @@ export function SourceSelectAllCheckbox(props: SourceSelectAllCheckboxProps) {
     setSelectedIds(allIds);
   }
 
+  if (!selectMultiple) {
+    return <></>;
+  }
+
   return (
     <Checkbox
       indeterminate={

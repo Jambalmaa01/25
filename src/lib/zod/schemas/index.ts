@@ -1,8 +1,5 @@
-export * from './adminCountriesSchema';
-export * from './adminCountryAddSchema';
-export * from './adminCountryEditSchema';
-export * from './adminCountryRemoveSchema';
-export * from './adminCountryRemoveForeverSchema';
-export * from './adminCountrySchema';
+export * from './admin-city';
+export * from './admin-country';
+
 export * from './authSignInSchema';
 export * from './sortDirectionSchema';

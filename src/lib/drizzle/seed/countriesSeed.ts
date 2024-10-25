@@ -6,7 +6,7 @@ export type CountrySeed = Omit<CountryTableInsert, 'id'> & { id: string };
 export const countriesSeed: CountrySeed[] = [
   {
     id: 'c2b2478a-1449-464a-9ba9-b3dd9b707379',
-    name: ' Австри',
+    name: 'Австри',
     codeName: 'Бүгд Найрамдах Австри Улc',
     addedAt,
     editedAt: null,
@@ -17,7 +17,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'd9ea8886-f8fe-4186-bb77-3349c27e34bd',
-    name: ' Азербайжан',
+    name: 'Азербайжан',
     codeName: 'Бүгд Найрамдах Азербайжан Улс',
     addedAt,
     editedAt: null,
@@ -28,7 +28,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '7a413865-f6ec-4cd5-87a4-f2f7e3348f6f',
-    name: ' Америкийн Нэгдсэн Улс ',
+    name: 'Америкийн Нэгдсэн Улс ',
     codeName: 'Америкийн Нэгдсэн Улс',
     addedAt,
     editedAt: null,
@@ -39,7 +39,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '7bbae35e-780d-4095-93a3-6239a069b9dd',
-    name: ' Ангол',
+    name: 'Ангол',
     codeName: 'Бүгд Найрамдах Ангол Улс',
     addedAt,
     editedAt: null,
@@ -50,8 +50,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '26913a08-c2d8-4ccf-855d-b59412a7e71d',
-    name: ' Афганистан',
-    codeName: ' Афганистан',
+    name: 'Афганистан',
+    codeName: 'Афганистан',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -61,7 +61,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'f1379afc-a54e-43c6-b493-d944aace8ac0',
-    name: ' Балба',
+    name: 'Балба',
     codeName: 'Холбооны Бүгд Найрамдах Ардчилсан Балба Улс',
     addedAt,
     editedAt: null,
@@ -72,7 +72,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '866758db-4d47-4170-a513-3e0d22d911b3',
-    name: ' Бангладеш ',
+    name: 'Бангладеш ',
     codeName: 'Бүгд Найрамдах Бангладеш Ард Улс',
     addedAt,
     editedAt: null,
@@ -83,8 +83,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '4854ae01-e0a9-4623-9057-2e3fac6bc734',
-    name: ' Барбадос',
-    codeName: ' Барбадос',
+    name: 'Барбадос',
+    codeName: 'Барбадос',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -94,7 +94,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'e93b5c6b-261a-4aef-88fa-c0b53537d2d3',
-    name: ' Бахрейн ',
+    name: 'Бахрейн ',
     codeName: 'Бахрейны Хаант Улс',
     addedAt,
     editedAt: null,
@@ -105,7 +105,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'f541492c-f4d6-4b31-878a-6306479a8dde',
-    name: ' Беларусь',
+    name: 'Беларусь',
     codeName: 'Бүгд Найрамдах Беларусь Улс',
     addedAt,
     editedAt: null,
@@ -116,7 +116,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '8517597a-6669-4587-9924-b76068bc82b5',
-    name: ' Бельги ',
+    name: 'Бельги ',
     codeName: 'Бельгийн Хаант Улс',
     addedAt,
     editedAt: null,
@@ -127,7 +127,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'c758051a-feb9-4a8f-9926-53a92431d4a0',
-    name: ' Бенин',
+    name: 'Бенин',
     codeName: 'Бүгд Найрамдах Бенин Улс',
     addedAt,
     editedAt: null,
@@ -138,7 +138,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'b0f63102-c2cf-499d-b02d-da4dfa81ed6d',
-    name: ' Болгар',
+    name: 'Болгар',
     codeName: 'Бүгд Найрамдах Болгар Улс',
     addedAt,
     editedAt: null,
@@ -149,7 +149,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '50435bbe-129e-4b51-9f66-939fba838c09',
-    name: ' Боливи',
+    name: 'Боливи',
     codeName: 'Боливийн Олон Үндэстний Улс',
     addedAt,
     editedAt: null,
@@ -160,8 +160,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '16b227a4-35b9-4478-b638-f409734ddbbb',
-    name: ' Босни ба Херцеговин',
-    codeName: ' Босни ба Херцеговин',
+    name: 'Босни ба Херцеговин',
+    codeName: 'Босни ба Херцеговин',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -171,7 +171,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '2fe2839f-54af-44ef-969f-0596efc6dc91',
-    name: ' Ботсвана',
+    name: 'Ботсвана',
     codeName: 'Бүгд Найрамдах Ботсвана Улс',
     addedAt,
     editedAt: null,
@@ -182,8 +182,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'de7fa32e-5b9e-45d9-ad07-d41fb855526a',
-    name: ' Бруней',
-    codeName: ' Бруней Даруссалам Улс',
+    name: 'Бруней',
+    codeName: 'Бруней Даруссалам Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -193,7 +193,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '227f2479-f6ed-4977-8ad9-8adef32bf067',
-    name: ' Бурунди',
+    name: 'Бурунди',
     codeName: 'Бүгд Найрамдах Бурунди Улс',
     addedAt,
     editedAt: null,
@@ -204,7 +204,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'ce907464-6abd-4750-8a86-c4dcabe8ae45',
-    name: ' Бутан',
+    name: 'Бутан',
     codeName: 'Бутаны Хаант Улс',
     addedAt,
     editedAt: null,
@@ -215,7 +215,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '912146be-c186-47ed-8e4f-45d4b2eccfb8',
-    name: ' Вануату',
+    name: 'Вануату',
     codeName: 'Бүгд Найрамдах Вануату Улс',
     addedAt,
     editedAt: null,
@@ -226,7 +226,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'f6778114-3d97-4579-b7fb-da8f07f73e10',
-    name: ' Ватикан',
+    name: 'Ватикан',
     codeName: 'Ватикан Хот Улс',
     addedAt,
     editedAt: null,
@@ -237,7 +237,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '0af98541-aac9-4c86-9d92-8bfc3e07a24e',
-    name: ' Венесуэл',
+    name: 'Венесуэл',
     codeName: 'Боливарын Бүгд Найрамдах Венесуэл Улс',
     addedAt,
     editedAt: null,
@@ -248,7 +248,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '8bfe4beb-031c-473e-8079-f5a05816935a',
-    name: ' Вьетнам',
+    name: 'Вьетнам',
     codeName: 'Бүгд Найрамдах Социалист Вьетнам Улс',
     addedAt,
     editedAt: null,
@@ -259,7 +259,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '413694d1-6f05-4fb5-9009-363c377514df',
-    name: ' Габон',
+    name: 'Габон',
     codeName: 'Бүгд Найрамдах Габон Улс',
     addedAt,
     editedAt: null,
@@ -270,7 +270,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '433e4fe0-b8ad-4278-8668-6cf1f484b92d',
-    name: ' Гамби',
+    name: 'Гамби',
     codeName: 'Бүгд Найрамдах Гамби Улс[15]',
     addedAt,
     editedAt: null,
@@ -281,7 +281,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '27a8b94f-9d1a-4b6d-8bea-39c3291dcba5',
-    name: ' Гана',
+    name: 'Гана',
     codeName: 'Бүгд Найрамдах Гана Улс',
     addedAt,
     editedAt: null,
@@ -292,7 +292,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'cd71cea2-4bf6-4329-b8d8-f22d3bd686dc',
-    name: ' Гватемал',
+    name: 'Гватемал',
     codeName: 'Бүгд Найрамдах Гватемал Улс',
     addedAt,
     editedAt: null,
@@ -303,7 +303,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '31dba84a-aa14-4909-a50d-787c41ee1204',
-    name: ' Гвиней',
+    name: 'Гвиней',
     codeName: 'Бүгд Найрамдах Гвиней Улс',
     addedAt,
     editedAt: null,
@@ -314,7 +314,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'c7ab2104-ea4a-4abf-9c3b-0a82132b198c',
-    name: ' Гвиней-Бисау ',
+    name: 'Гвиней-Бисау ',
     codeName: 'Бүгд Найрамдах Гвиней-Бисау Улс',
     addedAt,
     editedAt: null,
@@ -325,7 +325,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '8cdf2fd2-2581-4034-bedb-7ca86337346b',
-    name: ' Грек',
+    name: 'Грек',
     codeName: 'Бүгд Найрамдах Грек Улс',
     addedAt,
     editedAt: null,
@@ -336,8 +336,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '8fa162d1-cbe9-43eb-9e9e-ee8496abb26c',
-    name: ' Гүрж',
-    codeName: ' Гүрж',
+    name: 'Гүрж',
+    codeName: 'Гүрж',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -347,7 +347,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'bd424375-060e-451c-b698-9ebf1d1c598e',
-    name: ' Дани',
+    name: 'Дани',
     codeName: 'Данийн Хаант Улс',
     addedAt,
     editedAt: null,
@@ -358,7 +358,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '999f57f7-a082-4698-8388-cf78ab74fd3c',
-    name: ' Жибути',
+    name: 'Жибути',
     codeName: 'Бүгд Найрамдах Жибути Улс',
     addedAt,
     editedAt: null,
@@ -369,7 +369,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '2a549931-e34e-4367-acbe-ac570b01127f',
-    name: ' Замби',
+    name: 'Замби',
     codeName: 'Бүгд Найрамдах Замби Улс',
     addedAt,
     editedAt: null,
@@ -380,7 +380,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '907d83f4-84c3-4908-a041-b9c57c725a02',
-    name: ' Зимбабве',
+    name: 'Зимбабве',
     codeName: 'Бүгд Найрамдах Зимбабве Улс',
     addedAt,
     editedAt: null,
@@ -391,7 +391,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'e0a095af-7b1c-45e7-a6c6-92c95f390e43',
-    name: ' Зүүн Тимор',
+    name: 'Зүүн Тимор',
     codeName: 'Бүгд Найрамдах Ардчилсан Зүүн Тимор Улс',
     addedAt,
     editedAt: null,
@@ -402,8 +402,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '84c6c1f8-0480-4651-994a-57625c21a0c1',
-    name: ' Йемен',
-    codeName: ' Бүгд Найрамдах Йемен Улс',
+    name: 'Йемен',
+    codeName: 'Бүгд Найрамдах Йемен Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -413,7 +413,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'e9de8a5a-4534-4279-9e03-9835d16cf002',
-    name: ' Иран',
+    name: 'Иран',
     codeName: 'Исламын Бүгд Найрамдах Иран Улс',
     addedAt,
     editedAt: null,
@@ -424,7 +424,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'e064e0cb-f6c2-4bdb-8025-9f3e0110f5ae',
-    name: ' Испани',
+    name: 'Испани',
     codeName: 'Испанийн Хаант Улс',
     addedAt,
     editedAt: null,
@@ -435,7 +435,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '07af4460-e298-4a89-b5e8-bd0401352b3c',
-    name: ' Итали',
+    name: 'Итали',
     codeName: 'Бүгд Найрамдах Итали Улс',
     addedAt,
     editedAt: null,
@@ -446,7 +446,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '444e498b-a65f-4273-9d48-3e9f8aa311be',
-    name: ' Камбож',
+    name: 'Камбож',
     codeName: 'Камбожийн Хаант Улс',
     addedAt,
     editedAt: null,
@@ -457,8 +457,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '306715c6-8592-418f-ac3f-86eaf6dce733',
-    name: ' Канад',
-    codeName: ' Канад',
+    name: 'Канад',
+    codeName: 'Канад',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -468,7 +468,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'ff282ee4-bddf-476f-91fb-c110eaf758a1',
-    name: ' Кени',
+    name: 'Кени',
     codeName: 'Бүгд Найрамдах Кени Улс',
     addedAt,
     editedAt: null,
@@ -479,7 +479,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '0705a5a8-a99f-4f73-a29c-000dddca84a1',
-    name: ' Киргиз',
+    name: 'Киргиз',
     codeName: 'Бүгд Найрамдах Киргиз Улс',
     addedAt,
     editedAt: null,
@@ -490,8 +490,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '60a74eda-cb20-489d-826d-a9bfd705aa3c',
-    name: ' Конго, Бүгд Найрамдах',
-    codeName: ' Конго, Бүгд Найрамдах',
+    name: 'Конго, Бүгд Найрамдах',
+    codeName: 'Конго, Бүгд Найрамдах',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -501,8 +501,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '20a286a1-e1e6-4cc7-957d-661255b59784',
-    name: ' Косово ',
-    codeName: ' Бүгд Найрамдах Косово Улс',
+    name: 'Косово ',
+    codeName: 'Бүгд Найрамдах Косово Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -512,8 +512,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '768c2ca9-175a-473f-824b-4e320c2391ed',
-    name: ' Күүкийн арлууд',
-    codeName: ' Күүкийн арлууд',
+    name: 'Күүкийн арлууд',
+    codeName: 'Күүкийн арлууд',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -523,7 +523,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'fa4935fe-c9ac-41ee-b4ba-2f05324754e2',
-    name: ' Ливи',
+    name: 'Ливи',
     codeName: 'Ливи Улс',
     addedAt,
     editedAt: null,
@@ -534,7 +534,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'd6f500de-1c4c-41b0-adc6-2dc3c2f95513',
-    name: ' Мавритани',
+    name: 'Мавритани',
     codeName: 'Исламын Бүгд Найрамдах Мавритани Улс',
     addedAt,
     editedAt: null,
@@ -545,7 +545,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '936893b2-9383-4267-82f7-d4b824ddfae6',
-    name: ' Мальдив',
+    name: 'Мальдив',
     codeName: 'Бүгд Найрамдах Мальдив Улс',
     addedAt,
     editedAt: null,
@@ -556,7 +556,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '6cd98887-8504-4390-b497-27364d467e0a',
-    name: ' Марокко',
+    name: 'Марокко',
     codeName: 'Мароккогийн Хаант Улс',
     addedAt,
     editedAt: null,
@@ -567,7 +567,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'a49d4c36-1ff5-4c63-b003-04e3e2feb6a0',
-    name: ' Мексик',
+    name: 'Мексик',
     codeName: 'Мексикийн Нэгдсэн Улс',
     addedAt,
     editedAt: null,
@@ -578,8 +578,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '086274db-2212-444a-a040-1763802614b1',
-    name: ' Монтенегро',
-    codeName: ' Монтенегро',
+    name: 'Монтенегро',
+    codeName: 'Монтенегро',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -589,8 +589,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'bccf45c0-0411-4527-b743-95fb3cf2016f',
-    name: ' Мьянмар',
-    codeName: ' Мьянмарын Холбооны Бүгд Найрамдах Улс',
+    name: 'Мьянмар',
+    codeName: 'Мьянмарын Холбооны Бүгд Найрамдах Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -600,7 +600,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '0b15580f-6e02-425f-a436-9704e894b963',
-    name: ' Нидерланд',
+    name: 'Нидерланд',
     codeName: 'Нидерландын хаант улс',
     addedAt,
     editedAt: null,
@@ -611,8 +611,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'a797023f-1097-47e6-bbf1-e8fb0d97f5c6',
-    name: ' Ниуэ',
-    codeName: ' Ниуэ',
+    name: 'Ниуэ',
+    codeName: 'Ниуэ',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -622,7 +622,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '31070296-edf1-498a-bae0-ca91d7e90d90',
-    name: ' Норвеги ',
+    name: 'Норвеги ',
     codeName: 'Норвегийн Хаант Улс',
     addedAt,
     editedAt: null,
@@ -633,7 +633,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'f8bcd7f0-d56c-44b9-aa63-dfa613e74c59',
-    name: ' Нэгдсэн Хаант Улс',
+    name: 'Нэгдсэн Хаант Улс',
     codeName: 'Их Британи, Умард Ирландын Нэгдсэн Хаант Улс',
     addedAt,
     editedAt: null,
@@ -644,7 +644,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '7d143dcc-526a-45d9-802d-716ed2e6764c',
-    name: ' Орос',
+    name: 'Орос',
     codeName: 'Оросын Холбооны Улс',
     addedAt,
     editedAt: null,
@@ -655,7 +655,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'f7330a26-a0ed-4639-a30c-e85c1ab3b38d',
-    name: ' Өмнөд Осети',
+    name: 'Өмнөд Осети',
     codeName: 'Бүгд Найрамдах Өмнөд Осети Улс–Алани Улс',
     addedAt,
     editedAt: null,
@@ -666,7 +666,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'bf4b5ed3-e516-4417-89b1-f5b960b2891c',
-    name: ' Өмнөд Солонгос',
+    name: 'Өмнөд Солонгос',
     codeName: 'Бүгд Найрамдах Солонгос Улс',
     addedAt,
     editedAt: null,
@@ -677,7 +677,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '6eb69252-ae1a-4c90-8f10-d290d0ce1c6c',
-    name: ' Өмнөд Судан',
+    name: 'Өмнөд Судан',
     codeName: 'Бүгд Найрамдах Өмнөд Судан Улс',
     addedAt,
     editedAt: null,
@@ -688,8 +688,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '9075b76c-d42e-4c5d-88a0-4f74fc6ec65d',
-    name: ' Палестин',
-    codeName: ' Палестин Улс',
+    name: 'Палестин',
+    codeName: 'Палестин Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -699,7 +699,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '0fa035f1-eca7-4bcc-91a0-c2a98d685e2f',
-    name: ' Папуа Шинэ Гвиней',
+    name: 'Папуа Шинэ Гвиней',
     codeName: 'Папуа Шинэ Гвинейн Тусгаар Улс',
     addedAt,
     editedAt: null,
@@ -710,7 +710,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'd751257d-b6ec-4311-a0af-cfe7601e42e8',
-    name: ' Перу',
+    name: 'Перу',
     codeName: 'Бүгд Найрамдах Перу Улс',
     addedAt,
     editedAt: null,
@@ -721,7 +721,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '6dd8d863-84a5-48db-9952-4080ece8ca2a',
-    name: ' Польш',
+    name: 'Польш',
     codeName: 'Бүгд Найрамдах Польш Улс',
     addedAt,
     editedAt: null,
@@ -732,7 +732,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '3ffa936d-4416-45ee-a2ca-c5e76d543871',
-    name: ' Португал',
+    name: 'Португал',
     codeName: 'Бүгд Найрамдах Португал Улс',
     addedAt,
     editedAt: null,
@@ -743,7 +743,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '1048e8d2-b98a-4420-b8df-1c27eb4791b3',
-    name: ' Руанда',
+    name: 'Руанда',
     codeName: 'Бүгд Найрамдах Руанда Улс',
     addedAt,
     editedAt: null,
@@ -754,8 +754,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '06902c50-7bd5-45af-941e-d356c46adcce',
-    name: ' Румын',
-    codeName: ' Румын',
+    name: 'Румын',
+    codeName: 'Румын',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -765,7 +765,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'b2f3914d-963c-4f97-81c6-92b1b1bc3a61',
-    name: ' Самоа',
+    name: 'Самоа',
     codeName: 'Самоагийн Тусгаар Улс',
     addedAt,
     editedAt: null,
@@ -776,8 +776,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'f38ca763-7789-4608-9d95-8a045e165eae',
-    name: ' Сан-Марино',
-    codeName: ' Бүгд Найрамдах Сан-Марино Улс',
+    name: 'Сан-Марино',
+    codeName: 'Бүгд Найрамдах Сан-Марино Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -787,8 +787,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'dd68c5ba-2f65-4538-b80f-f4216e077fb4',
-    name: ' Сент-Винсент ба Гренадин',
-    codeName: ' Сент-Винсент ба Гренадин',
+    name: 'Сент-Винсент ба Гренадин',
+    codeName: 'Сент-Винсент ба Гренадин',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -798,7 +798,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '243d3a2c-f86e-4dd9-84c4-b384926896c7',
-    name: ' Сент-Китс ба Невис',
+    name: 'Сент-Китс ба Невис',
     codeName: 'Сент-Кристофер ба Невисийн Холбооны Улс',
     addedAt,
     editedAt: null,
@@ -809,7 +809,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '97ed96cf-0495-415e-b942-8fd5db486b77',
-    name: ' Серби',
+    name: 'Серби',
     codeName: 'Бүгд Найрамдах Серби Улс',
     addedAt,
     editedAt: null,
@@ -820,7 +820,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'bc01e080-6681-4e25-94cd-e65546568aca',
-    name: ' Сири',
+    name: 'Сири',
     codeName: 'Арабын Бүгд Найрамдах Сири Улс',
     addedAt,
     editedAt: null,
@@ -831,7 +831,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'b3d79727-e422-4abd-a1f9-0612358db700',
-    name: ' Словени',
+    name: 'Словени',
     codeName: 'Бүгд Найрамдах Словени Улс',
     addedAt,
     editedAt: null,
@@ -842,8 +842,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'fca3ff85-95fc-4f5e-a6a4-59ae767f96f5',
-    name: ' Соломоны арлууд',
-    codeName: ' Соломоны арлууд',
+    name: 'Соломоны арлууд',
+    codeName: 'Соломоны арлууд',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -853,7 +853,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '9eb02ecc-d909-433f-91c3-1ac991e4e1e0',
-    name: ' Сомали',
+    name: 'Сомали',
     codeName: 'Холбооны Бүгд Найрамдах Сомали Улс',
     addedAt,
     editedAt: null,
@@ -864,7 +864,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'aec33a88-e524-4eca-8c77-835b18d52394',
-    name: ' Судан',
+    name: 'Судан',
     codeName: 'Бүгд Найрамдах Судан Улс',
     addedAt,
     editedAt: null,
@@ -875,7 +875,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'dd2b72cb-512e-4d93-b3d9-a1af8815467a',
-    name: ' Тажикистан',
+    name: 'Тажикистан',
     codeName: 'Бүгд Найрамдах Тажикистан Улс',
     addedAt,
     editedAt: null,
@@ -886,7 +886,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'b0abcfe0-1b5a-4ba7-98c9-cd461c35d0d1',
-    name: ' Тонга ',
+    name: 'Тонга ',
     codeName: 'Тонгагийн Хаант Улс',
     addedAt,
     editedAt: null,
@@ -897,8 +897,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '54059ffe-cdc8-4826-939f-2c5d3a0656ab',
-    name: ' Төв Африкийн Бүгд Найрамдах Улс',
-    codeName: ' Төв Африкийн Бүгд Найрамдах Улс',
+    name: 'Төв Африкийн Бүгд Найрамдах Улс',
+    codeName: 'Төв Африкийн Бүгд Найрамдах Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -908,7 +908,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '5ee8e6a7-32a6-49f4-9587-7ff57c369ec3',
-    name: ' Тунис',
+    name: 'Тунис',
     codeName: 'Бүгд Найрамдах Тунис Улс',
     addedAt,
     editedAt: null,
@@ -919,8 +919,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '0968d9d0-e871-4c5d-9edd-ab7834a2a5d5',
-    name: ' Туркменистан',
-    codeName: ' Туркменистан',
+    name: 'Туркменистан',
+    codeName: 'Туркменистан',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -930,7 +930,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'ef2f6b0f-55ef-43ef-9fde-51a3bea510a4',
-    name: ' Уганда ',
+    name: 'Уганда ',
     codeName: 'Бүгд Найрамдах Уганда Улс',
     addedAt,
     editedAt: null,
@@ -941,7 +941,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '1064beba-6bbb-481e-b8cf-144f80134ba8',
-    name: ' Узбекистан ',
+    name: 'Узбекистан ',
     codeName: 'Бүгд Найрамдах Узбекистан Улс',
     addedAt,
     editedAt: null,
@@ -952,8 +952,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '5af1897a-c9c0-46d5-a428-5e1010979e37',
-    name: ' Украин',
-    codeName: ' Украин',
+    name: 'Украин',
+    codeName: 'Украин',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -963,7 +963,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'ee13a1c1-ba63-4d3a-af71-c64270d30567',
-    name: ' Умард Македон ',
+    name: 'Умард Македон ',
     codeName: 'Бүгд Найрамдах Умард Македон Улс',
     addedAt,
     editedAt: null,
@@ -974,8 +974,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '8c205285-787b-4a4b-a8bb-6884370539e8',
-    name: ' Унгар',
-    codeName: ' Унгар',
+    name: 'Унгар',
+    codeName: 'Унгар',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -985,7 +985,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'af3b7262-94a3-4179-8b50-d4957b9c6822',
-    name: ' Уругвай',
+    name: 'Уругвай',
     codeName: 'Дорнын Бүгд Найрамдах Уругвай Улс',
     addedAt,
     editedAt: null,
@@ -996,7 +996,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '5966e83b-cb4e-415c-88f7-39b35748b1c1',
-    name: ' Фижи ',
+    name: 'Фижи ',
     codeName: 'Бүгд Найрамдах Фижи Улс',
     addedAt,
     editedAt: null,
@@ -1007,8 +1007,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '0cfcaa54-c724-46c7-834f-5874019f55a5',
-    name: ' Филиппин ',
-    codeName: ' Бүгд Найрамдах Филиппин Улс',
+    name: 'Филиппин ',
+    codeName: 'Бүгд Найрамдах Филиппин Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -1018,7 +1018,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '9defec01-03ff-47c1-a30a-8a38c9358d84',
-    name: ' Хаити',
+    name: 'Хаити',
     codeName: 'Бүгд Найрамдах Хаити Улс',
     addedAt,
     editedAt: null,
@@ -1029,8 +1029,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '5a48c879-a24d-4d84-b538-3ef6d695d0c0',
-    name: ' Чад ',
-    codeName: ' Бүгд Найрамдах Чад Улс',
+    name: 'Чад ',
+    codeName: 'Бүгд Найрамдах Чад Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -1040,8 +1040,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '825dd7e5-9949-411e-9476-aac9f0ef4240',
-    name: ' Чех',
-    codeName: ' Бүгд Найрамдах Чех Улс',
+    name: 'Чех',
+    codeName: 'Бүгд Найрамдах Чех Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -1051,7 +1051,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '2b54cc9c-3846-4a89-b6d0-72202741b2a8',
-    name: ' Швейцар',
+    name: 'Швейцар',
     codeName: 'Швейцарын Холбооны Улс',
     addedAt,
     editedAt: null,
@@ -1062,8 +1062,8 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '0cf8b1a0-aa0f-46ca-8ec6-9cb28c171cf7',
-    name: ' Шри Ланка',
-    codeName: ' Бүгд Найрамдах Ардчилсан Социалист Шри Ланка Улс',
+    name: 'Шри Ланка',
+    codeName: 'Бүгд Найрамдах Ардчилсан Социалист Шри Ланка Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -1073,7 +1073,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: '67ffaad2-e83e-4bf9-99fa-1df690690a37',
-    name: ' Эквадор',
+    name: 'Эквадор',
     codeName: 'Бүгд Найрамдах Эквадор Улс',
     addedAt,
     editedAt: null,
@@ -1084,7 +1084,7 @@ export const countriesSeed: CountrySeed[] = [
   },
   {
     id: 'a35c01d2-dae4-4a32-b9ce-5533f8a3a87f',
-    name: ' Эстони ',
+    name: 'Эстони ',
     codeName: 'Бүгд Найрамдах Эстони Улс',
     addedAt,
     editedAt: null,
@@ -1448,7 +1448,7 @@ export const countriesSeed: CountrySeed[] = [
   {
     id: '27da72a0-335c-49b6-9254-e9792f1af3cf',
     name: 'Кувейт',
-    codeName: ' Кувейт Улс',
+    codeName: 'Кувейт Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -1789,7 +1789,7 @@ export const countriesSeed: CountrySeed[] = [
   {
     id: '04b451a7-fbb1-47b4-8611-7f4b1a856dc4',
     name: 'Парагвай',
-    codeName: ' Бүгд Найрамдах Парагвай Улс',
+    codeName: 'Бүгд Найрамдах Парагвай Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -1800,7 +1800,7 @@ export const countriesSeed: CountrySeed[] = [
   {
     id: 'd45c4269-917a-4869-87d8-d439f271cb31',
     name: 'Приднестр',
-    codeName: ' ᠌᠌Приднестрийн Бүгд Найрамдах Молдав Улс',
+    codeName: '᠌᠌Приднестрийн Бүгд Найрамдах Молдав Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -2009,7 +2009,7 @@ export const countriesSeed: CountrySeed[] = [
   {
     id: 'f2ea1f38-e07c-47a3-857a-42dbd8b35fee',
     name: 'Умард Кипр',
-    codeName: ' Умард Киприйн Бүгд Найрамдах Турк Улс',
+    codeName: 'Умард Киприйн Бүгд Найрамдах Турк Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -2031,7 +2031,7 @@ export const countriesSeed: CountrySeed[] = [
   {
     id: '9a42a078-c463-4617-86ae-156c192bddc8',
     name: 'Финланд',
-    codeName: ' Бүгд Найрамдах Финланд Улс',
+    codeName: 'Бүгд Найрамдах Финланд Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -2064,7 +2064,7 @@ export const countriesSeed: CountrySeed[] = [
   {
     id: 'ad34e4bd-aa0b-4f1e-9170-b279d7675372',
     name: 'Хорват',
-    codeName: ' Бүгд Найрамдах Хорват Улс',
+    codeName: 'Бүгд Найрамдах Хорват Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -2119,7 +2119,7 @@ export const countriesSeed: CountrySeed[] = [
   {
     id: '8fe41732-0c7b-44a4-9237-5a58b5de58c9',
     name: 'Экваторын Гвиней',
-    codeName: ' Экваторын Гвинейн Бүгд Найрамдах Улс',
+    codeName: 'Экваторын Гвинейн Бүгд Найрамдах Улс',
     addedAt,
     editedAt: null,
     removedAt: null,
@@ -2152,7 +2152,7 @@ export const countriesSeed: CountrySeed[] = [
   {
     id: 'fbbd5b4c-40cb-47d6-a56a-873af4cfaa1e',
     name: 'Эсватини',
-    codeName: ' Эсватинийн Хаант Улс',
+    codeName: 'Эсватинийн Хаант Улс',
     addedAt,
     editedAt: null,
     removedAt: null,

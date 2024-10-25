@@ -47,7 +47,7 @@ export function SourceSearch(props: SourceSearchProps) {
             </InputAdornment>
           ),
         }}
-        autoFocus
+        // autoFocus
       />
     </Box>
   );

@@ -17,12 +17,20 @@ export type PageBreadcrumbMatch = {
 const pageBreadcrumbMatch: PageBreadcrumbMatch = {
   '/': 'Нүүр хуудас',
   '/admin': 'Админ хуудас',
+
   '/admin/countries': 'Улсууд',
   '/admin/countries/add': 'Улс бүртгэх',
   '/admin/countries/[:countryId]': 'Улс',
   '/admin/countries/[:countryId]/edit': 'Улс засах',
   '/admin/countries/[:countryId]/remove': 'Улс устгах',
   '/admin/countries/[:countryId]/remove-forever': 'Улс баазаас утгах',
+
+  '/admin/cities': 'Хот/Аймгууд',
+  '/admin/cities/add': 'Хот/Аймаг бүртгэх',
+  '/admin/cities/[:cityId]': 'Хот/Аймаг',
+  '/admin/cities/[:cityId]/edit': 'Хот/Аймаг засах',
+  '/admin/cities/[:cityId]/remove': 'Хот/Аймаг устгах',
+  '/admin/cities/[:cityId]/remove-forever': 'Хот/Аймаг баазаас утгах',
 };
 
 function getPaths(url: Path): Path[] {
