@@ -25,6 +25,7 @@ export type AdminCityAddFormProps = {
 
 export function AdminCityAddForm(props: AdminCityAddFormProps) {
   const { onSuccess, BackComponent } = props;
+  const [countryName, setCountryName] = useState('');
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const [snackbarId, setSnackbarId] = useState<SnackbarKey | null>(null);
   const { handleSubmit, control, reset, setValue, watch } =
@@ -36,6 +37,7 @@ export function AdminCityAddForm(props: AdminCityAddFormProps) {
     onSuccess(data) {
       reset();
       onSuccess();
+      setCountryName('');
       enqueueSnackbar(`"${data.city.name}" бүртгэгдлээ`, {
         variant: 'success',
       });
@@ -51,7 +53,6 @@ export function AdminCityAddForm(props: AdminCityAddFormProps) {
     },
   });
   const [selectDialog, setSelectDialog] = useAtom(adminCountrySelectDialogAtom);
-  const [countryName, setCountryName] = useState('');
   trpc.adminCountryQuery.useQuery(
     { countryId: watch('countryId') },
     {

@@ -12,7 +12,7 @@ import {
   rolesTable,
   usersTable,
 } from '../schemas';
-import { db } from '..';
+import { db, eq } from '..';
 import { rolesSeed } from './rolesSeed';
 import { usersSeed } from './usersSeed';
 import { countriesSeed } from './countriesSeed';
@@ -25,6 +25,7 @@ import { positionsSeed } from './positionsSeed';
 import { organizationsSeed } from './organizationsSeed';
 import { departmentsSeed } from './departmentsSeed';
 import { employeeMovementsSeed } from './employeeMovementsSeed';
+import { toumkuEmployeeId, userToumkuId } from './vars';
 
 async function seed() {
   await db.transaction(async tx => {
@@ -52,6 +53,10 @@ async function seed() {
       .insert(employeeMovementsTable)
       .values(employeeMovementsSeed)
       .onConflictDoNothing();
+    await tx
+      .update(usersTable)
+      .set({ employeeId: toumkuEmployeeId })
+      .where(eq(usersTable.id, userToumkuId));
   });
 }
 

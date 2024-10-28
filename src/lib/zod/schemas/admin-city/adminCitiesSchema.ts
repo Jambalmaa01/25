@@ -19,6 +19,8 @@ export const adminCitiesSchema = z.object({
   sortDirection: sortDirectionSchema.default(adminCitiesSortDirection),
   startDate: z.number().default(adminCitiesStartDate),
   endDate: z.number().default(adminCitiesEndDate),
+
+  filterCountryId: z.string().optional(),
 });
 
 export type AdminCitiesSchema = z.infer<typeof adminCitiesSchema>;

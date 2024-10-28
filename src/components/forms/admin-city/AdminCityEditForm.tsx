@@ -31,6 +31,7 @@ export type AdminCityEditFormProps = {
 
 export function AdminCityEditForm(props: AdminCityEditFormProps) {
   const { cityId, onSuccess, BackComponent } = props;
+  const [countryName, setCountryName] = useState('');
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const [snackbarId, setSnackbarId] = useState<SnackbarKey | null>(null);
   const { handleSubmit, control, reset, setValue, watch } =
@@ -41,6 +42,7 @@ export function AdminCityEditForm(props: AdminCityEditFormProps) {
   const { mutate, isLoading } = trpc.adminCityEditMutation.useMutation({
     onSuccess(data) {
       reset();
+      setCountryName('');
       onSuccess();
       enqueueSnackbar(`"${data.city.name}" бүртгэгдлээ`, {
         variant: 'success',
@@ -68,7 +70,6 @@ export function AdminCityEditForm(props: AdminCityEditFormProps) {
     }
   );
   const [selectDialog, setSelectDialog] = useAtom(adminCountrySelectDialogAtom);
-  const [countryName, setCountryName] = useState('');
   trpc.adminCountryQuery.useQuery(
     { countryId: watch('countryId') },
     {

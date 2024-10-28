@@ -10,5 +10,6 @@ export const usersSeed: UserSeed[] = [
     password: '$2a$10$nWBalfvME1/lzG5mxsbNZezqr5XqAdEIboxcxoBj7.eJfaznVVK8O',
     addedAt,
     roleId: adminId,
+    employeeId: null,
   },
 ];

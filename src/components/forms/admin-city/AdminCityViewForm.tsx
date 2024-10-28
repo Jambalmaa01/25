@@ -61,6 +61,10 @@ export function AdminCityViewForm(props: AdminCityViewFormProps) {
                   <TableCell>{data.city.id}</TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>Улс</TableCell>
+                  <TableCell>{data.city.countryName}</TableCell>
+                </TableRow>
+                <TableRow>
                   <TableCell>Нэр</TableCell>
                   <TableCell>{data.city.name}</TableCell>
                 </TableRow>

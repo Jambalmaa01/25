@@ -1,15 +1,15 @@
 import { EmployeeTableInsert } from '../schemas';
 import {
-  mongoliaId,
-  arkhangaiId,
+  countryMongoliaId,
   ofitserId,
   deshlegchId,
   org0165Id,
   dep0125Id,
   zastaviinDargaId,
   addedAt,
-  toumkuId,
-  erdeneBulganId,
+  userToumkuId,
+  cityUlaanbaatarId,
+  districtBaynzurhId,
 } from './vars';
 
 export type EmployeeTableSeed = Omit<EmployeeTableInsert, 'id'> & {
@@ -24,15 +24,15 @@ export const employeesSeed: EmployeeTableSeed[] = [
     familyName: 'Засаг',
     nationality: 'Халх',
     birthDate: '1997-12-28',
-    countryId: mongoliaId,
-    cityId: arkhangaiId,
-    districtId: erdeneBulganId,
+    countryId: countryMongoliaId,
+    cityId: cityUlaanbaatarId,
+    districtId: districtBaynzurhId,
     rankGroupId: ofitserId,
     rankId: deshlegchId,
     organizationId: org0165Id,
     departmentId: dep0125Id,
     positionId: zastaviinDargaId,
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
 ];

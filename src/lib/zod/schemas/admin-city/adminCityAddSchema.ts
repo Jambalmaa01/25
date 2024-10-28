@@ -1,3 +1,4 @@
+import { countryMongoliaId } from '@/lib/drizzle/seed/vars';
 import { z } from 'zod';
 
 export const adminCityAddSchema = z.object({
@@ -11,5 +12,5 @@ export type AdminCityAddSchema = z.infer<typeof adminCityAddSchema>;
 export const adminCityAddSchemaDefaultValues: AdminCityAddSchema = {
   name: '',
   codeName: '',
-  countryId: '',
+  countryId: countryMongoliaId,
 };

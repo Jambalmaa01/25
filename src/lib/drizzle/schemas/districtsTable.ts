@@ -1,4 +1,4 @@
-import { pgTable, timestamp, unique, uuid, varchar } from 'drizzle-orm/pg-core';
+import { pgTable, timestamp, uuid, varchar } from 'drizzle-orm/pg-core';
 import { citiesTable } from './citiesTable';
 import { usersTable } from './usersTable';
 import { countriesTable } from './countriesTable';
@@ -26,14 +26,14 @@ export const districtsTable = pgTable(
       .notNull(),
     editedBy: uuid('edited_by').references(() => usersTable.id),
     removedBy: uuid('removed_by').references(() => usersTable.id),
-  },
-  ({ countryId, cityId, name }) => ({
-    districtNameUniqueIdx: unique('district_name_unique_idx').on(
-      countryId,
-      cityId,
-      name
-    ),
-  })
+  }
+  // ({ countryId, cityId, name }) => ({
+  //   districtNameUniqueIdx: unique('district_name_unique_idx').on(
+  //     countryId,
+  //     cityId,
+  //     name
+  //   ),
+  // })
 );
 
 export type DistrictTable = typeof districtsTable.$inferSelect;

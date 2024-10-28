@@ -31,6 +31,13 @@ const pageBreadcrumbMatch: PageBreadcrumbMatch = {
   '/admin/cities/[:cityId]/edit': 'Хот/Аймаг засах',
   '/admin/cities/[:cityId]/remove': 'Хот/Аймаг устгах',
   '/admin/cities/[:cityId]/remove-forever': 'Хот/Аймаг баазаас утгах',
+
+  '/admin/districts': 'Дүүрэг/Сумууд',
+  '/admin/districts/add': 'Дүүрэг/Сум бүртгэх',
+  '/admin/districts/[:districtId]': 'Дүүрэг/Сум',
+  '/admin/districts/[:districtId]/edit': 'Дүүрэг/Сум засах',
+  '/admin/districts/[:districtId]/remove': 'Дүүрэг/Сум устгах',
+  '/admin/districts/[:districtId]/remove-forever': 'Дүүрэг/Сум баазаас утгах',
 };
 
 function getPaths(url: Path): Path[] {

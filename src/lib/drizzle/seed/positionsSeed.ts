@@ -1,5 +1,5 @@
 import { PositionTableInsert } from '../schemas';
-import { addedAt, toumkuId } from './vars';
+import { addedAt, userToumkuId } from './vars';
 
 export type PositionSeed = Omit<PositionTableInsert, 'id'> & {
   id: string;
@@ -11,6 +11,6 @@ export const positionsSeed: PositionSeed[] = [
     name: 'Заставын дарга',
     codeName: 'zastaviin_darga',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
 ];

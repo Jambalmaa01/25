@@ -5,36 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1729483512798,
-      "tag": "0000_postgis",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1729483531243,
-      "tag": "0001_careful_cardiac",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1729495967051,
-      "tag": "0002_lethal_blink",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "7",
-      "when": 1729499882812,
-      "tag": "0003_cute_zeigeist",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "7",
-      "when": 1729665763693,
-      "tag": "0004_romantic_sage",
+      "when": 1730106906819,
+      "tag": "0000_brown_baron_zemo",
       "breakpoints": true
     }
   ]

@@ -2,7 +2,7 @@ import { RankTableInsert } from '../schemas';
 import {
   ofitserId,
   addedAt,
-  toumkuId,
+  userToumkuId,
   ahlagchId,
   gereetAhlagchId,
   gereetId,
@@ -22,7 +22,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'ген',
     codeName: 'general',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '226f7ff7-8c9a-4c2c-a485-dff85d6bd67d',
@@ -31,7 +31,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'д/ген',
     codeName: 'deslegch-general',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '61f7a5a0-08ca-4262-9df3-089aa3c0511c',
@@ -40,7 +40,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'х/ген',
     codeName: 'hoshuuch-general',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '23eaa1be-7ed7-4ea6-b112-6427fb5cbf32',
@@ -49,7 +49,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'б/ген',
     codeName: 'brigade-general',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '75b50a97-0461-4a60-b096-c25e9f407abd',
@@ -58,7 +58,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'х/а',
     codeName: 'hurandaa',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '62b89b34-da72-4b4d-b5d6-0e9c31e7591f',
@@ -67,7 +67,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'д/х',
     codeName: 'ded-hurandaa',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '93503157-26c1-4119-a7cb-6f662647d483',
@@ -76,7 +76,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'х/ч',
     codeName: 'hoshuuch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: 'aca352ea-2e2c-4082-b04d-c238641e5258',
@@ -85,7 +85,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'а/х',
     codeName: 'ahmad',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '32b2b605-f34b-4602-ace1-2bd068c034c4',
@@ -94,7 +94,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'а/д',
     codeName: 'ahlah-deslegch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: 'eeb0cfd9-0df1-4c62-8c89-7a6b735c4ee6',
@@ -103,7 +103,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'д/ч',
     codeName: 'deslegch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
 
   {
@@ -113,7 +113,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'т/а',
     codeName: 'terguun-ahlagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '6aeb4d05-f0be-4111-a4fb-1b1ee807009f',
@@ -122,7 +122,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'с/а',
     codeName: 'surgagch-ahlagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '3c110827-97fb-4fe4-820f-56d6898a9396',
@@ -131,7 +131,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'с/а',
     codeName: 'ahlah-ahlagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '304be1d4-79c6-42ab-953c-92b29ee3c888',
@@ -140,7 +140,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'а/ч',
     codeName: 'ahlagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '360d1312-fa9a-4456-ac87-7d75d07fb400',
@@ -149,7 +149,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'д/а',
     codeName: 'ded-ahlagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
 
   {
@@ -159,7 +159,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'т/а',
     codeName: 'gereet-terguun-ahlagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '24c78a03-1972-4c20-aec6-a8a78e306462',
@@ -168,7 +168,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'с/а',
     codeName: 'gereet-surgagch-ahlagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '23ec58ce-bb35-4cf7-97ab-9a676ad1b543',
@@ -177,7 +177,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'с/а',
     codeName: 'gereet-ahlah-ahlagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '43c5c2c7-f47d-4287-9d25-1d5d02815cd1',
@@ -186,7 +186,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'а/ч',
     codeName: 'gereet-ahlagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '5b02a139-d1b4-458f-bb8d-bb219ddc22fc',
@@ -195,7 +195,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'д/а',
     codeName: 'gereet-ded-ahlagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
 
   {
@@ -205,7 +205,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'а/т',
     codeName: 'gereet-ahlah-turuuch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: 'bad10ee7-0c8f-4b38-8e14-972aa11e02d0',
@@ -214,7 +214,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'т/ч',
     codeName: 'gereet-turuuch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '8ce83d2e-1085-41b6-ba02-d87ece7bb701',
@@ -223,7 +223,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'д/т',
     codeName: 'gereet-ded-turuuch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '06a8743a-30f0-4f84-83cc-3d4d8b8b9042',
@@ -232,7 +232,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'а/б',
     codeName: 'gereet-ahlah-baildagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: 'ed83f2cd-2a19-4fc1-8447-bd7050fe8876',
@@ -241,7 +241,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'б/ч',
     codeName: 'gereet-baildagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
 
   {
@@ -251,7 +251,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'а/т',
     codeName: 'ahlah-turuuch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '007e31c8-c419-4141-beea-7a343a1b4a77',
@@ -260,7 +260,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'т/ч',
     codeName: 'turuuch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: 'a2a32e92-c90a-44f6-8dc9-d485a759b01b',
@@ -269,7 +269,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'д/т',
     codeName: 'ded-turuuch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: '50ffa4f5-8029-4f95-b627-04bd47a546e1',
@@ -278,7 +278,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'а/б',
     codeName: 'ahlah-baildagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
   {
     id: 'c10bc854-b08e-4b94-8d50-b0e4d4513950',
@@ -287,7 +287,7 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'б/ч',
     codeName: 'baildagch',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
 
   {
@@ -297,6 +297,6 @@ export const ranksSeed: RankTableSeed[] = [
     shortName: 'энгийн',
     codeName: 'engiin',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
   },
 ];

@@ -11,18 +11,6 @@ export const adminCityAddMutation = adminProcedure
       const { name, codeName, countryId } = input;
 
       const city = await db.transaction(async tx => {
-        const isCityNameExists = await db
-          .select()
-          .from(citiesTable)
-          .where(eq(citiesTable.name, name));
-
-        if (isCityNameExists.length > 0) {
-          throw new TRPCError({
-            code: 'CONFLICT',
-            message: `"${name}" аль хэдийн бүртгэсэн байна`,
-          });
-        }
-
         const isCityCodeNameExists = await db
           .select()
           .from(citiesTable)

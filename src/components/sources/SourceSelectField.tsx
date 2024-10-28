@@ -10,13 +10,13 @@ export type SourceSelectFieldProps = TextFieldProps & {
 };
 
 export function SourceSelectField(props: SourceSelectFieldProps) {
-  const { onSelect, onClear, ...rest } = props;
+  const { onSelect, onClear, disabled, ...rest } = props;
 
   return (
     <TextField
       InputProps={{
         startAdornment: (
-          <IconButton onClick={onSelect} sx={{ mr: 1 }}>
+          <IconButton disabled={disabled} onClick={onSelect} sx={{ mr: 1 }}>
             <OpenInBrowserIcon />
           </IconButton>
         ),
@@ -27,6 +27,7 @@ export function SourceSelectField(props: SourceSelectFieldProps) {
         ),
         readOnly: true,
       }}
+      disabled={disabled}
       {...rest}
     />
   );

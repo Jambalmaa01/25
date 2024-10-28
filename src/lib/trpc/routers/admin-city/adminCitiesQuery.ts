@@ -40,6 +40,7 @@ export const adminCitiesQuery = adminProcedure
         sortDirection = adminCitiesSortDirection,
         startDate = adminCitiesStartDate,
         endDate = adminCitiesEndDate,
+        filterCountryId,
       } = input;
 
       const addedBy = aliasedTable(usersTable, 'addedBy');
@@ -63,7 +64,11 @@ export const adminCitiesQuery = adminProcedure
           ? between(citiesTable.addedAt, new Date(startDate), new Date(endDate))
           : undefined;
 
-      const filters = and(searchFilter, dateFilter);
+      const countryFilter = filterCountryId
+        ? eq(citiesTable.countryId, filterCountryId)
+        : undefined;
+
+      const filters = and(searchFilter, dateFilter, countryFilter);
 
       const orderBy =
         sortColumn === 'addedUsername'

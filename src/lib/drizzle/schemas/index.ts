@@ -1,6 +1,7 @@
 export * from './citiesTable';
 export * from './countriesTable';
 export * from './departmentsTable';
+export * from './directionsEnum';
 export * from './districtsTable';
 export * from './employeeMovementsTable';
 export * from './employeesTable';
@@ -10,3 +11,4 @@ export * from './rankGroupsTable';
 export * from './ranksTable';
 export * from './rolesTable';
 export * from './usersTable';
+export * from './zonesEnum';

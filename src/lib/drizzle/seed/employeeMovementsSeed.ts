@@ -7,7 +7,7 @@ import {
   ofitserId,
   org0165Id,
   toumkuEmployeeId,
-  toumkuId,
+  userToumkuId,
   zastaviinDargaId,
 } from './vars';
 
@@ -22,7 +22,7 @@ export const employeeMovementsSeed: EmployeeMovementTableSeed[] = [
   {
     id: 'ee28b989-75dc-42ad-8477-4df3266b6fa9',
     addedAt,
-    addedBy: toumkuId,
+    addedBy: userToumkuId,
     organizationCameDate: dayjs(addedAt).format('YYYY-MM-DD'),
     departmentCameDate: dayjs(addedAt).format('YYYY-MM-DD'),
     employeeId: toumkuEmployeeId,

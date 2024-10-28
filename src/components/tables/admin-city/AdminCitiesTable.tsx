@@ -76,6 +76,8 @@ export type AdminCitiesTableProps = {
   setStartDate: (startDate: number) => void;
   endDate: number;
   setEndDate: (endDate: number) => void;
+
+  filterCountryId?: string;
 };
 
 export function AdminCitiesTable(props: AdminCitiesTableProps) {
@@ -99,6 +101,8 @@ export function AdminCitiesTable(props: AdminCitiesTableProps) {
     setStartDate,
     endDate,
     setEndDate,
+
+    filterCountryId,
   } = props;
   const { enqueueSnackbar } = useSnackbar();
   const { data, isLoading, isFetching, isError, error, refetch } =
@@ -111,6 +115,7 @@ export function AdminCitiesTable(props: AdminCitiesTableProps) {
         sortDirection,
         startDate,
         endDate,
+        filterCountryId,
       },
       {
         onError(error) {
