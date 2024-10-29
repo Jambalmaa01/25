@@ -18,12 +18,14 @@ import {
 export type AdminDistrictSelectDialogProps = {
   selectedDistrictId: string;
   onSelect(cityId: string): void;
+  filterCountryId?: string;
+  filterCityId?: string;
 };
 
 export function AdminDistrictSelectDialog(
   props: AdminDistrictSelectDialogProps
 ) {
-  const { selectedDistrictId, onSelect } = props;
+  const { selectedDistrictId, onSelect, filterCountryId, filterCityId } = props;
   const [dialog, setDialog] = useAtom(adminDistrictSelectDialogAtom);
   const [page, setPage] = useState(adminDistrictsDefaultPage);
   const [take, setTake] = useState(adminDistrictsDefaultTake);
@@ -79,6 +81,8 @@ export function AdminDistrictSelectDialog(
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
+          filterCountryId={filterCountryId}
+          filterCityId={filterCityId}
         />
       </DialogContent>
     </Dialog>

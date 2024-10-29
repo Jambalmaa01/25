@@ -76,6 +76,9 @@ export type AdminDistrictsTableProps = {
   setStartDate: (startDate: number) => void;
   endDate: number;
   setEndDate: (endDate: number) => void;
+
+  filterCountryId?: string;
+  filterCityId?: string;
 };
 
 export function AdminDistrictsTable(props: AdminDistrictsTableProps) {
@@ -99,6 +102,9 @@ export function AdminDistrictsTable(props: AdminDistrictsTableProps) {
     setStartDate,
     endDate,
     setEndDate,
+
+    filterCountryId,
+    filterCityId,
   } = props;
   const { enqueueSnackbar } = useSnackbar();
   const { data, isLoading, isFetching, isError, error, refetch } =
@@ -111,6 +117,9 @@ export function AdminDistrictsTable(props: AdminDistrictsTableProps) {
         sortDirection,
         startDate,
         endDate,
+
+        filterCountryId,
+        filterCityId,
       },
       {
         onError(error) {

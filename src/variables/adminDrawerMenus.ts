@@ -32,6 +32,14 @@ export const adminDrawerMenus: AdminDrawerMenu[] = [
         name: 'Дүүрэг/Сум',
         href: '/admin/districts',
       },
+      {
+        name: 'Анги',
+        href: '/admin/organizations',
+      },
+      {
+        name: 'Салбар',
+        href: '/admin/departments',
+      },
     ],
     divider: true,
   },

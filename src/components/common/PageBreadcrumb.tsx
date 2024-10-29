@@ -38,6 +38,20 @@ const pageBreadcrumbMatch: PageBreadcrumbMatch = {
   '/admin/districts/[:districtId]/edit': 'Дүүрэг/Сум засах',
   '/admin/districts/[:districtId]/remove': 'Дүүрэг/Сум устгах',
   '/admin/districts/[:districtId]/remove-forever': 'Дүүрэг/Сум баазаас утгах',
+
+  '/admin/organizations': 'Ангиуд',
+  '/admin/organizations/add': 'Анги бүртгэх',
+  '/admin/organizations/[:organizationId]': 'Анги',
+  '/admin/organizations/[:organizationId]/edit': 'Анги засах',
+  '/admin/organizations/[:organizationId]/remove': 'Анги устгах',
+  '/admin/organizations/[:organizationId]/remove-forever': 'Анги баазаас утгах',
+
+  '/admin/departments': 'Салбарууд',
+  '/admin/departments/add': 'Салбар бүртгэх',
+  '/admin/departments/[:departmentId]': 'Салбар',
+  '/admin/departments/[:departmentId]/edit': 'Салбар засах',
+  '/admin/departments/[:departmentId]/remove': 'Салбар устгах',
+  '/admin/departments/[:departmentId]/remove-forever': 'Салбар баазаас утгах',
 };
 
 function getPaths(url: Path): Path[] {

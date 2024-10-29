@@ -19,6 +19,18 @@ export const paths = [
   '/admin/districts/[:districtId]/edit',
   '/admin/districts/[:districtId]/remove',
   '/admin/districts/[:districtId]/remove-forever',
+  '/admin/organizations',
+  '/admin/organizations/add',
+  '/admin/organizations/[:organizationId]',
+  '/admin/organizations/[:organizationId]/edit',
+  '/admin/organizations/[:organizationId]/remove',
+  '/admin/organizations/[:organizationId]/remove-forever',
+  '/admin/departments',
+  '/admin/departments/add',
+  '/admin/departments/[:departmentId]',
+  '/admin/departments/[:departmentId]/edit',
+  '/admin/departments/[:departmentId]/remove',
+  '/admin/departments/[:departmentId]/remove-forever',
 ] as const;
 
 export type Path = (typeof paths)[number];

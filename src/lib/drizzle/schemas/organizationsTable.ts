@@ -1,7 +1,7 @@
 import {
   boolean,
   date,
-  numeric,
+  doublePrecision,
   pgTable,
   timestamp,
   uuid,
@@ -17,9 +17,9 @@ import { directionsEnum } from './directionsEnum';
 
 export const organizationsTable = pgTable('organizations', {
   id: uuid('id').defaultRandom().primaryKey().notNull(),
-  name: varchar('name', { length: 255 }).notNull().unique(),
+  name: varchar('name', { length: 255 }).notNull(),
   codeName: varchar('code_name', { length: 255 }).notNull().unique(),
-  identityNumber: varchar('identity_number', { length: 4 }),
+  identityNumber: varchar('identity_number', { length: 4 }).unique(),
   geometry: geom('geom').notNull(),
 
   countryId: uuid('country_id')
@@ -40,22 +40,22 @@ export const organizationsTable = pgTable('organizations', {
   ranking: varchar('ranking'),
   electricPowerSource: varchar('electric_power_source'),
 
-  lengthResponsibleBorder: numeric('length_responsible_border'),
-  lengthDryLand: numeric('length_dry_land'),
-  lengthWaterBoundaryLength: numeric('length_water_boundary'),
+  lengthResponsibleBorder: doublePrecision('length_responsible_border'),
+  lengthDryLand: doublePrecision('length_dry_land'),
+  lengthWaterBoundaryLength: doublePrecision('length_water_boundary'),
 
-  distanceFromBorder: varchar('distance_from_border'),
-  distanceFromWestern: varchar('distance_from_western'),
-  distanceFromEastern: varchar('distance_from_eastern'),
-  distanceFromWesternNeighborDetachment: varchar(
+  distanceFromBorder: doublePrecision('distance_from_border'),
+  distanceFromWestern: doublePrecision('distance_from_western'),
+  distanceFromEastern: doublePrecision('distance_from_eastern'),
+  distanceFromWesternNeighborDetachment: doublePrecision(
     'distance_from_western_neighbor_detachment'
   ),
-  distanceFromEasternNeighborDetachment: varchar(
+  distanceFromEasternNeighborDetachment: doublePrecision(
     'distance_from_eastern_neighbor_detachment'
   ),
-  distanceFromUlaanbaatar: varchar('distance_from_ulaanbaatar'),
-  distanceFromCity: varchar('distance_from_city'),
-  distanceFromDistrict: varchar('distance_from_district'),
+  distanceFromUlaanbaatar: doublePrecision('distance_from_ulaanbaatar'),
+  distanceFromCity: doublePrecision('distance_from_city'),
+  distanceFromDistrict: doublePrecision('distance_from_district'),
 
   networkMobicom: boolean('network_mobicom'),
   networkSkytel: boolean('network_skytel'),
