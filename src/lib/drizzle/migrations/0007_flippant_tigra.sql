@@ -1,0 +1,1 @@
+ALTER TABLE "departments" ADD CONSTRAINT "departments_geom_unique" UNIQUE("geom");

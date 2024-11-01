@@ -3,9 +3,7 @@ import { useSnackbar, SnackbarContent, CustomContentProps } from 'notistack';
 import { Alert } from '@mui/material';
 import WarningAmberOutlinedIcon from '@mui/icons-material/WarningAmberOutlined';
 
-interface WarningSnackbarProps extends CustomContentProps {}
-
-export const WarningSnackbar = forwardRef<HTMLDivElement, WarningSnackbarProps>(
+export const WarningSnackbar = forwardRef<HTMLDivElement, CustomContentProps>(
   ({ id, message }, ref) => {
     const { closeSnackbar } = useSnackbar();
 

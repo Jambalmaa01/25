@@ -1,10 +1,12 @@
 'use client';
 
 import { Box, Toolbar } from '@mui/material';
-import { PropsWithChildren } from 'react';
+import { ReactNode } from 'react';
 import { adminDrawerWidth } from '@/variables';
 
-export type AdminMainProps = PropsWithChildren<{}>;
+export type AdminMainProps = {
+  children: ReactNode;
+};
 
 export function AdminMain(props: AdminMainProps) {
   const { children } = props;

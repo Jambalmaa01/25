@@ -3,9 +3,7 @@ import { SnackbarContent, CustomContentProps } from 'notistack';
 import { Alert } from '@mui/material';
 import HourglassBottomOutlinedIcon from '@mui/icons-material/HourglassBottomOutlined';
 
-interface LoadingSnackbarProps extends CustomContentProps {}
-
-export const LoadingSnackbar = forwardRef<HTMLDivElement, LoadingSnackbarProps>(
+export const LoadingSnackbar = forwardRef<HTMLDivElement, CustomContentProps>(
   ({ message }, ref) => {
     return (
       <SnackbarContent ref={ref}>

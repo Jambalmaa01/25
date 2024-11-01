@@ -1,0 +1,1 @@
+ALTER TABLE "departments" ADD CONSTRAINT "departments_identity_number_unique" UNIQUE("identity_number");

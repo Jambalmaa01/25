@@ -18,7 +18,7 @@ import { directionsEnum } from './directionsEnum';
 
 export const departmentsTable = pgTable('departments', {
   id: uuid('id').defaultRandom().primaryKey().notNull(),
-  name: varchar('name', { length: 255 }).notNull().unique(),
+  name: varchar('name', { length: 255 }).notNull(),
   codeName: varchar('code_name', { length: 255 }).notNull(),
   identityNumber: varchar('identity_number', { length: 4 }).unique(),
   geometry: geom('geom').notNull(),

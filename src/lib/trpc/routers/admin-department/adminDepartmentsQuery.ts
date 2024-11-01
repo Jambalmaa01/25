@@ -54,11 +54,13 @@ export const adminDepartmentsQuery = adminProcedure
             isUUID(search) ? eq(departmentsTable.id, search) : undefined,
             ilike(departmentsTable.name, `%${search}%`),
             ilike(departmentsTable.codeName, `%${search}%`),
+            ilike(departmentsTable.identityNumber, `%${search}%`),
             ilike(addedBy.username, `%${search}%`),
             ilike(editedBy.username, `%${search}%`),
             ilike(removedBy.username, `%${search}%`),
             ilike(countriesTable.name, `%${search}%`),
-            ilike(citiesTable.name, `%${search}%`)
+            ilike(citiesTable.name, `%${search}%`),
+            ilike(organizationsTable.identityNumber, `%${search}%`)
           )
         : undefined;
 
@@ -140,7 +142,7 @@ export const adminDepartmentsQuery = adminProcedure
           countryName: countriesTable.name,
           cityName: citiesTable.name,
           districtName: districtsTable.name,
-          organizationName: organizationsTable.name,
+          organizationName: organizationsTable.identityNumber,
         })
         .from(departmentsTable)
         .leftJoin(addedBy, eq(addedBy.id, departmentsTable.addedBy))

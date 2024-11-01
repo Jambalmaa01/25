@@ -75,7 +75,7 @@ export const AdminDrawerMenuList = memo((props: AdminDrawerMenuListProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname, items]);
 
-  if (!items.length) return <></>;
+  if (!items.length) return null;
 
   const handleItemClick = (hasChildren: boolean, parentKey: string) => {
     if (hasChildren) {
@@ -105,8 +105,8 @@ export const AdminDrawerMenuList = memo((props: AdminDrawerMenuListProps) => {
               }}
             >
               <ListItemButton
-                LinkComponent={hasChildren ? Fragment : Link}
-                href={'href' in item ? item.href : ''}
+                LinkComponent={hasChildren ? undefined : Link}
+                href={'href' in item ? item.href : '/'}
                 sx={{ borderRadius: 0, p: 0.4, pl: `${depth * 6}px` }}
                 onClick={() => {
                   if ('children' in item) {

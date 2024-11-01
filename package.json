@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf .next",
-    "dev": "pnpm clean && next dev -p 10010",
+    "dev": "pnpm clean && next dev -p 10010 --turbopack",
     "build": "pnpm clean && next build",
     "start": "pnpm clean && next start",
     "lint": "next lint",
@@ -19,7 +19,8 @@
     "db:seed": "tsx ./src/lib/drizzle/seed/index.ts",
     "db:seed:users": "tsx ./src/lib/drizzle/seed/users.ts",
     "db:seed:uuid": "tsx ./src/lib/drizzle/seed/uuid.ts",
-    "db:seed:temp": "tsx ./src/lib/drizzle/seed/temp.ts"
+    "db:seed:temp": "tsx ./src/lib/drizzle/seed/temp.ts",
+    "db:bulk:department": "tsx ./src/lib/drizzle/bulk/departmentBulk.ts"
   },
   "dependencies": {
     "@emotion/styled": "^11.13.0",
@@ -39,12 +40,12 @@
     "geojson": "^0.5.0",
     "jotai": "^2.10.1",
     "jsonwebtoken": "^9.0.2",
-    "next": "14.2.15",
+    "next": "15.0.2",
     "next-usequerystate": "^1.20.0",
     "notistack": "^3.0.1",
     "pg": "^8.13.1",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",
     "superjson": "^2.2.1",
     "zod": "^3.23.8"

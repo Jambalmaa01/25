@@ -1,33 +1,23 @@
-import { organizationsTable } from '../schemas';
-import { asc, db } from '..';
 import { writeFile } from 'fs/promises';
+import { db, departmentsTable, asc } from '..';
 import { join } from 'path';
+import { zastavJSON } from '../bulk/zastavJSON';
 
 async function seed() {
+  console.log(zastavJSON.features.length);
+  return;
   await db.transaction(async tx => {
-    const organizations = await tx
+    const departments = await tx
       .select()
-      .from(organizationsTable)
-      .orderBy(asc(organizationsTable.identityNumber));
+      .from(departmentsTable)
+      .orderBy(asc(departmentsTable.identityNumber));
 
-    const json = JSON.stringify(organizations, null, 2);
-    const path = join(process.cwd(), 'public', 'temp', 'organizations.json');
+    const json = JSON.stringify(departments, null, 2);
+    const path = join(process.cwd(), 'public', 'temp', 'departments.json');
 
     await writeFile(path, json, 'utf8');
   });
 }
-
-// async function downloadCountries() {
-//   const countries = await tx
-//     .select()
-//     .from(countriesTable)
-//     .orderBy(asc(countriesTable.name));
-
-//   const json = JSON.stringify(countries, null, 2);
-//   const path = join(process.cwd(), 'public', 'temp', 'countries.json');
-
-//   await writeFile(path, json, 'utf8');
-// }
 
 seed()
   .catch(e => {

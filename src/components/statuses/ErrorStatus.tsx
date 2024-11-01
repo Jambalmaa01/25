@@ -1,7 +1,9 @@
 import { Typography } from '@mui/material';
+import { TRPCClientErrorLike } from '@trpc/client';
+import { AnyProcedure } from '@trpc/server';
 
 export type ErrorStatusProps = {
-  error: any;
+  error: TRPCClientErrorLike<AnyProcedure>;
 };
 
 export function ErrorStatus(props: ErrorStatusProps) {

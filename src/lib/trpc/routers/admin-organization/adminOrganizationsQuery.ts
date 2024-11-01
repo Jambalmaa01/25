@@ -53,6 +53,7 @@ export const adminOrganizationsQuery = adminProcedure
             isUUID(search) ? eq(organizationsTable.id, search) : undefined,
             ilike(organizationsTable.name, `%${search}%`),
             ilike(organizationsTable.codeName, `%${search}%`),
+            ilike(organizationsTable.identityNumber, `%${search}%`),
             ilike(addedBy.username, `%${search}%`),
             ilike(editedBy.username, `%${search}%`),
             ilike(removedBy.username, `%${search}%`),

@@ -6,7 +6,7 @@ export type SourceRemoveForeverButtonProps = LoadingButtonProps;
 export function SourceRemoveForeverButton(
   props: SourceRemoveForeverButtonProps
 ) {
-  const { href, children, ...rest } = props;
+  const { children, ...rest } = props;
 
   return (
     <LoadingButton

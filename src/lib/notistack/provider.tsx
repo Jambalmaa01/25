@@ -1,7 +1,7 @@
 'use client';
 
 import { SnackbarProvider } from 'notistack';
-import { PropsWithChildren } from 'react';
+import { ReactNode } from 'react';
 import {
   DefaultSnackbar,
   ErrorSnackbar,
@@ -17,7 +17,9 @@ declare module 'notistack' {
   }
 }
 
-export type NotistackProviderProps = PropsWithChildren<{}>;
+export type NotistackProviderProps = {
+  children: ReactNode;
+};
 
 export function NotistackProvider(props: NotistackProviderProps) {
   const { children } = props;

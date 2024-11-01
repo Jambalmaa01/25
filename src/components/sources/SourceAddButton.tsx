@@ -4,7 +4,7 @@ import AddIcon from '@mui/icons-material/Add';
 export type SourceAddButtonProps = LoadingButtonProps;
 
 export function SourceAddButton(props: SourceAddButtonProps) {
-  const { href, children, ...rest } = props;
+  const { children, ...rest } = props;
 
   return (
     <LoadingButton

@@ -35,7 +35,7 @@ export function SourceSelectAllCheckbox(props: SourceSelectAllCheckboxProps) {
   }
 
   if (!selectMultiple) {
-    return <></>;
+    return null;
   }
 
   return (

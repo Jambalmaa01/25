@@ -1,0 +1,1 @@
+ALTER TABLE "departments" DROP CONSTRAINT "departments_identity_number_unique";

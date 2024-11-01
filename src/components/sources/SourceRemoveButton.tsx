@@ -4,7 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 export type SourceRemoveButtonProps = LoadingButtonProps;
 
 export function SourceRemoveButton(props: SourceRemoveButtonProps) {
-  const { href, children, ...rest } = props;
+  const { children, ...rest } = props;
 
   return (
     <LoadingButton

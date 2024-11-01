@@ -3,9 +3,7 @@ import { useSnackbar, SnackbarContent, CustomContentProps } from 'notistack';
 import { Alert } from '@mui/material';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
-interface InfoSnackbarProps extends CustomContentProps {}
-
-export const InfoSnackbar = forwardRef<HTMLDivElement, InfoSnackbarProps>(
+export const InfoSnackbar = forwardRef<HTMLDivElement, CustomContentProps>(
   ({ id, message }, ref) => {
     const { closeSnackbar } = useSnackbar();
 

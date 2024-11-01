@@ -3,9 +3,7 @@ import { useSnackbar, SnackbarContent, CustomContentProps } from 'notistack';
 import { Alert } from '@mui/material';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 
-interface SuccessSnackbarProps extends CustomContentProps {}
-
-export const SuccessSnackbar = forwardRef<HTMLDivElement, SuccessSnackbarProps>(
+export const SuccessSnackbar = forwardRef<HTMLDivElement, CustomContentProps>(
   ({ id, message }, ref) => {
     const { closeSnackbar } = useSnackbar();
 

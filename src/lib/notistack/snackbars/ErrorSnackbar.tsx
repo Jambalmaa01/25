@@ -3,9 +3,7 @@ import { useSnackbar, SnackbarContent, CustomContentProps } from 'notistack';
 import { Alert } from '@mui/material';
 import ReportGmailerrorredOutlinedIcon from '@mui/icons-material/ReportGmailerrorredOutlined';
 
-interface ErrorSnackbarProps extends CustomContentProps {}
-
-export const ErrorSnackbar = forwardRef<HTMLDivElement, ErrorSnackbarProps>(
+export const ErrorSnackbar = forwardRef<HTMLDivElement, CustomContentProps>(
   ({ id, message }, ref) => {
     const { closeSnackbar } = useSnackbar();
 

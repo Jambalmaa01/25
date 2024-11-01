@@ -832,11 +832,11 @@ export function AdminOrganizationsTable(props: AdminOrganizationsTableProps) {
                       <TableCell>{distanceFromUlaanbaatar}</TableCell>
                       <TableCell>{distanceFromCity}</TableCell>
                       <TableCell>{distanceFromDistrict}</TableCell>
-                      <TableCell>{networkMobicom}</TableCell>
+                      <TableCell>{networkMobicom ? 'Байгаа' : '-'}</TableCell>
                       <TableCell>{networkSkytel ? 'Байгаа' : '-'}</TableCell>
                       <TableCell>{networkUnitel ? 'Байгаа' : '-'}</TableCell>
                       <TableCell>{networkGmobile ? 'Байгаа' : '-'}</TableCell>
-                      <TableCell>{nerelberM100k ? 'Байгаа' : '-'}</TableCell>
+                      <TableCell>{nerelberM100k}</TableCell>
                       <TableCell>{coordinateM100k}</TableCell>
                       <TableCell>
                         <MuiLink

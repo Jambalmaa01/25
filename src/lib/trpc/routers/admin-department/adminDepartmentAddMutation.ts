@@ -1,8 +1,7 @@
 import { adminDepartmentAddSchema } from '@/lib/zod';
-import { departmentsTable, db, eq } from '@/lib/drizzle';
+import { departmentsTable, db } from '@/lib/drizzle';
 import { adminProcedure } from '../../procedures';
 import { tRPCException } from '../../exception';
-import { TRPCError } from '@trpc/server';
 
 export const adminDepartmentAddMutation = adminProcedure
   .input(adminDepartmentAddSchema)
@@ -41,18 +40,6 @@ export const adminDepartmentAddMutation = adminProcedure
       } = input;
 
       const department = await db.transaction(async tx => {
-        const isDepartmentCodeNameExists = await db
-          .select()
-          .from(departmentsTable)
-          .where(eq(departmentsTable.codeName, codeName));
-
-        if (isDepartmentCodeNameExists.length > 0) {
-          throw new TRPCError({
-            code: 'CONFLICT',
-            message: `"${codeName}" код аль хэдийн бүртгэсэн байна`,
-          });
-        }
-
         const departments = await tx
           .insert(departmentsTable)
           .values({

@@ -2,9 +2,7 @@ import { forwardRef, useCallback } from 'react';
 import { useSnackbar, SnackbarContent, CustomContentProps } from 'notistack';
 import { Alert } from '@mui/material';
 
-interface DefaultSnackbarProps extends CustomContentProps {}
-
-export const DefaultSnackbar = forwardRef<HTMLDivElement, DefaultSnackbarProps>(
+export const DefaultSnackbar = forwardRef<HTMLDivElement, CustomContentProps>(
   ({ id, message }, ref) => {
     const { closeSnackbar } = useSnackbar();
 

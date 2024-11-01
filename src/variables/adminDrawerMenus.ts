@@ -17,31 +17,29 @@ export type AdminDrawerMenu = {
 
 export const adminDrawerMenus: AdminDrawerMenu[] = [
   {
+    name: 'Улс',
+    href: '/admin/countries',
     icon: LocationOnIcon,
-    name: 'Байршил',
-    children: [
-      {
-        name: 'Улс',
-        href: '/admin/countries',
-      },
-      {
-        name: 'Хот/Аймаг',
-        href: '/admin/cities',
-      },
-      {
-        name: 'Дүүрэг/Сум',
-        href: '/admin/districts',
-      },
-      {
-        name: 'Анги',
-        href: '/admin/organizations',
-      },
-      {
-        name: 'Салбар',
-        href: '/admin/departments',
-      },
-    ],
-    divider: true,
+  },
+  {
+    name: 'Хот/Аймаг',
+    href: '/admin/cities',
+    icon: LocationOnIcon,
+  },
+  {
+    name: 'Дүүрэг/Сум',
+    href: '/admin/districts',
+    icon: LocationOnIcon,
+  },
+  {
+    name: 'Анги',
+    href: '/admin/organizations',
+    icon: LocationOnIcon,
+  },
+  {
+    name: 'Салбар',
+    href: '/admin/departments',
+    icon: LocationOnIcon,
   },
   {
     icon: LogoutIcon,

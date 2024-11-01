@@ -342,7 +342,7 @@ export function AdminDepartmentsTable(props: AdminDepartmentsTableProps) {
                     sortDirection={sortDirection}
                     setSortDirection={setSortDirection}
                   >
-                    Отрядын дугаар
+                    Заставын дугаар
                   </SourceSort>
                 </TableCell>
                 <TableCell>
@@ -353,7 +353,7 @@ export function AdminDepartmentsTable(props: AdminDepartmentsTableProps) {
                     sortDirection={sortDirection}
                     setSortDirection={setSortDirection}
                   >
-                    Ангийн дугаар
+                    Салбарын дугаар
                   </SourceSort>
                 </TableCell>
                 <TableCell>
@@ -800,7 +800,7 @@ export function AdminDepartmentsTable(props: AdminDepartmentsTableProps) {
                       <TableCell>{distanceFromEastern}</TableCell>
                       <TableCell>{distanceFromDetachment}</TableCell>
                       <TableCell>{distanceFromDistrict}</TableCell>
-                      <TableCell>{networkMobicom}</TableCell>
+                      <TableCell>{networkMobicom ? 'Байгаа' : '-'}</TableCell>
                       <TableCell>{networkSkytel ? 'Байгаа' : '-'}</TableCell>
                       <TableCell>{networkUnitel ? 'Байгаа' : '-'}</TableCell>
                       <TableCell>{networkGmobile ? 'Байгаа' : '-'}</TableCell>
